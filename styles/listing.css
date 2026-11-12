@@ -1,22 +1,49 @@
 /* listing.css — selected states, folder list, message list, unread badges */
 
 /* ── Listing selected / unread ───────────────────────────────────── */
-html.dark-mode .listing li.selected,
-html.dark-mode .listing li.selected *,
+html.dark-mode .listing li.selected > a,
+html.dark-mode .listing li.selected > div > a,
 html.dark-mode .listing tr.selected td,
-html.dark-mode .listing tr.selected td *,
-html:not(.dark-mode) .listing li.selected,
-html:not(.dark-mode) .listing li.selected *,
-html:not(.dark-mode) .listing tr.selected td,
-html:not(.dark-mode) .listing tr.selected td * {
+html:not(.dark-mode) .listing li.selected > a,
+html:not(.dark-mode) .listing li.selected > div > a,
+html:not(.dark-mode) .listing tr.selected td {
     background-color: var(--ctp-lavender) !important;
 }
 
-html.dark-mode .listing li.selected *,
-html.dark-mode .listing tr.selected td *,
-html:not(.dark-mode) .listing li.selected *,
-html:not(.dark-mode) .listing tr.selected td * {
+html.dark-mode .listing li.selected > a,
+html.dark-mode .listing li.selected > div > a,
+html.dark-mode .listing tr.selected td,
+html:not(.dark-mode) .listing li.selected > a,
+html:not(.dark-mode) .listing li.selected > div > a,
+html:not(.dark-mode) .listing tr.selected td {
     color: var(--ctp-base) !important;
+}
+
+/* Unselected children of a selected parent keep the sidebar's mantle background. */
+html.dark-mode .listing li.selected ul,
+html:not(.dark-mode) .listing li.selected ul {
+    background-color: var(--ctp-mantle) !important;
+}
+
+html.dark-mode .listing li.selected ul > li:not(.selected),
+html:not(.dark-mode) .listing li.selected ul > li:not(.selected) {
+    background-color: var(--ctp-mantle) !important;
+}
+
+html.dark-mode .listing li.selected ul a,
+html:not(.dark-mode) .listing li.selected ul a {
+    background-color: transparent !important;
+    color: var(--ctp-text) !important;
+}
+
+html.dark-mode .listing li.selected div.treetoggle,
+html:not(.dark-mode) .listing li.selected div.treetoggle {
+    color: var(--ctp-base) !important;
+}
+
+html.dark-mode .listing li.selected ul div.treetoggle,
+html:not(.dark-mode) .listing li.selected ul div.treetoggle {
+    color: var(--ctp-text) !important;
 }
 
 html.dark-mode .listing .selected .unreadcount,
@@ -31,21 +58,7 @@ html:not(.dark-mode) .listing .unreadcount {
     color: var(--ctp-base) !important;
 }
 
-html.dark-mode .listing tr.selected td,
-html:not(.dark-mode) .listing tr.selected td {
-    color: var(--ctp-mantle) !important;
-}
-
 /* ── Listing details ───────────────────────────────────────────── */
-html.dark-mode .listing li.selected ul,
-html:not(.dark-mode) .listing li.selected ul {
-    background-color: var(--ctp-base) !important;
-}
-
-html.dark-mode .listing li.selected ul div.treetoggle,
-html:not(.dark-mode) .listing li.selected ul div.treetoggle {
-    color: var(--ctp-text) !important;
-}
 
 html.dark-mode .listing li.droptarget > a,
 html.dark-mode .listing tr.droptarget > td,
