@@ -109,3 +109,11 @@ html.dark-mode ul.menu.toolbar .dropbutton a.dropdown:hover,
 html:not(.dark-mode) ul.menu.toolbar .dropbutton a.dropdown:hover {
     background-color: var(--ctp-surface0) !important;
 }
+
+/* addressbook sidebar header carries no role=toolbar */
+html.dark-mode .header,
+html:not(.dark-mode) .header {
+    background-color: var(--ctp-mantle) !important;
+    border-bottom: 1px solid var(--ctp-surface0) !important;
+    color: var(--ctp-text) !important;
+}

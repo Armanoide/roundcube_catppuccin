@@ -1,8 +1,8 @@
 /* Catppuccin Mocha palette */
 :root {
     --ctp-base:           #1e1e2e;
-    --ctp-mantle:         #11111b;
-    --ctp-crust:          #181825;
+    --ctp-mantle:         #181825;
+    --ctp-crust:          #11111b;
     --ctp-surface0:       #313244;
     --ctp-surface1:       #45475a;
     --ctp-surface2:       #585b70;

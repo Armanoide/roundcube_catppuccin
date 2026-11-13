@@ -118,3 +118,10 @@ html:not(.dark-mode) .menu a:not(.disabled):hover,
 html:not(.dark-mode) .menu a:not(.disabled):focus {
     background-color: transparent;
 }
+
+/* inline toolbar menu in a header (addressbook) is not a popup — keep it transparent */
+html.dark-mode ul.menu.toolbar.listing,
+html:not(.dark-mode) ul.menu.toolbar.listing {
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
