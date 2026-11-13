@@ -69,3 +69,31 @@ html:not(.dark-mode) .ui-dialog-buttonset button.btn-secondary.cancel:hover {
     background-color: var(--ctp-surface1) !important;
     color: var(--ctp-lavender) !important;
 }
+
+/* ── Iconizer folder-icon picker overlay (roundcube_iconizer) ─── */
+#iconizer-overlay .iconizer-dialog {
+    background-color: var(--ctp-mantle) !important;
+    border: 1px solid var(--ctp-surface0) !important;
+    color: var(--ctp-text) !important;
+}
+
+#iconizer-overlay .iconizer-cell:hover {
+    background-color: var(--ctp-surface0) !important;
+}
+
+#iconizer-overlay .iconizer-cell.selected {
+    border-color: var(--ctp-blue) !important;
+}
+
+#iconizer-overlay .iconizer-preview {
+    color: var(--ctp-subtext1) !important;
+}
+
+/* buttons do not inherit color — the sprite currentColor would resolve to UA black */
+#iconizer-overlay .iconizer-cell {
+    color: var(--ctp-text) !important;
+}
+
+#iconizer-overlay .iconizer-cell.selected {
+    color: var(--ctp-blue) !important;
+}
