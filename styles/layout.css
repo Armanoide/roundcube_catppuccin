@@ -54,11 +54,18 @@ html:not(.dark-mode) #taskmenu a.selected {
 
 html.dark-mode #taskmenu .action-buttons a,
 html.dark-mode #taskmenu .action-buttons a:hover,
-html.dark-mode #taskmenu .action-buttons a.selected,
 html:not(.dark-mode) #taskmenu .action-buttons a,
-html:not(.dark-mode) #taskmenu .action-buttons a:hover,
-html:not(.dark-mode) #taskmenu .action-buttons a.selected {
+html:not(.dark-mode) #taskmenu .action-buttons a:hover {
     color: var(--ctp-lavender) !important;
+}
+
+/* selected = lavender pill (header-toolbar.css) → text must be base, not lavender */
+html.dark-mode #taskmenu .action-buttons a.selected,
+html.dark-mode #taskmenu .action-buttons a.selected:hover,
+html:not(.dark-mode) #taskmenu .action-buttons a.selected,
+html:not(.dark-mode) #taskmenu .action-buttons a.selected:hover {
+    color: var(--ctp-base) !important;
+    background-color: var(--ctp-lavender) !important;
 }
 
 html.dark-mode #taskmenu a:hover,
